@@ -1,0 +1,33 @@
+######################## Comandos para adicionar em um arquivo Dockerfile ########################################
+
+# declara uma variável VERSION com o calor 18-alpine3.17
+ARG VERSION=18-alpine3.17
+
+# define uma imagem base. Imagem para extendermos em nossa imagem customizada
+FROM node:${VERSION}
+
+# define um diretório de trabalho. Diretório pai/raiz
+WORKDIR /src
+
+# Declara uma variável de ambiente chamada PORT com valor 7000
+ENV PORT=7000
+
+# redeclara para tornar acessível. Valor continua sendo 18-alpine3.17
+ARG VERSION
+
+# copia um arquivo seguindo o padrão ORIGEM(máquina) DESTINO(imagem)
+COPY package*.json ./
+COPY yarn.lock ./
+COPY install_all_deps.sh ./
+
+# executa comandos de terminal na fase de build da nossa imagem
+RUN chmod +x install_all_deps.sh
+RUN ./install_all_deps.sh
+
+# expõe uma porta do container
+EXPOSE ${PORT}
+
+COPY app.js ./
+
+# executa comandos de entrada. Primeiros comandos assim que o conatainer é inicializado
+CMD ["npm", "start"]

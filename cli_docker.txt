@@ -1,0 +1,37 @@
+docker run <imagem> - cria um container a partir da imagem especificada
+
+docker pull <imagem> - puxa uma imagem disponível no dockerhub
+
+docker image ls - verifica as imagens puxadas para o meu ambiente
+
+docker container ls (docker ps) - verifica os conatainer que estão sendo executados
+
+docker container ls -a - verifica containers que já foram executados no ambiente
+
+docker run -it <image> - -i imagem interativa | -t conecta com o terminal local
+
+docker container stop <container id> - Para a execução de um container
+
+docker image rm <image id or name> - para remover uma imagem do ambiente
+
+docker image rm -f <image id or name> - para remover uma imagem do ambiente forçadamente
+
+docker run --name <escolher para o container> -d <imagem> - -d usado para não travar o terminal
+
+docker container rm -f <container id ou nome> - remove um container do ambiente
+
+docker container start <container id ou nome> - inicia um container existente
+
+docker logs <container id ou nome> - verificar os logs de um container em execução
+
+docker run --name <escolher para o container> -d -p <porta da máquina>:<porta da imagem> <imagem> - -p redireciona a porta
+
+docker build . - constrói uma imagem (necessário arquivo Dockerfile)
+
+docker tag <imagem id> <selecionar nome>:<selecionar tag> - serve para diferenciar as imagens como, A:1.0 e A:2.0
+
+docker build -t <nome da imagem>:<selecionar tag> . - adicionando nome e tag na fase de build
+
+docker system prune -a - excluir arquivos que não estão sendo utilizados
+
+

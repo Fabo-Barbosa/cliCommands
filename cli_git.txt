@@ -1,0 +1,38 @@
+git init - inicializa um repositório;
+
+git status - faz um relatório que mostra quais arquivos foram adicionados;
+
+git add "nome do arquivo" - adiciona um arquivo;
+
+git add . - adiciona todos os arquivo de u repositório;
+
+git commit -m "informação sobre a versão" - versiona o repositório;
+
+git push - envia o repositório pro github;
+
+git remote add origin link do repositório;
+
+git reflog - exibi as versões do meu projeto;
+
+git push --set-upstream origin master - envia o repositório para branch master.
+
+git remote set-url origin url nova
+
+git reset --hard <código da versão> - retornar para uma versão antiga
+
+git branch - Lista todas as ramificações do projeto
+
+git branch <nome da branch> - cria uma nova ramificação
+
+git checkout <nome da branch> - muda da branch atual para especificada com nome
+
+git merge <nome da branch> - Incorpora as informações da branch especificada
+
+git pull - Pega as informações de um repositório do github e incorpora no repositório local
+
+git fetch - pega as informações sobre branchs
+
+
+
+
+
