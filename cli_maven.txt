@@ -1,0 +1,2 @@
+mvn clean package spring-boot:run -DskipTests - utilizado no diretório da API para executá-la via shell
+mvn flyway:migrate - subir migrations sem inicializar a api, usado com o plugin org.flywaydb
